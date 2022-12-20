@@ -1,0 +1,438 @@
+libalien-wxwidgets-perl (0.69+dfsg-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 17:58:35 +0800
+
+libalien-wxwidgets-perl (0.69+dfsg-3) unstable; urgency=medium
+
+  [ Laurent Baillet ]
+  * fix lintian file-contains-trailing-whitespace warning
+
+  [ gregor herrmann ]
+  * debian/control: update Build-Depends for cross builds.
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Repository.
+
+  [ gregor herrmann ]
+  * Drop alternative dependency on c-compiler.
+    Not all packags providing c-compiler work with this package, especially
+    not tcc.
+    (Closes: #960214)
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Drop ancient Breaks.
+  * Drop ancient alternative (build) depends on perl.
+  * Annotate test-only build dependencies with <!nocheck>.
+  * Use HTTPS for URLs in debian/upstream/metadata.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 11 May 2020 18:18:00 +0200
+
+libalien-wxwidgets-perl (0.69+dfsg-2) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.3 (no changes needed)
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Xavier Guimard ]
+  * Fix Perl version dependency
+  * Replace MIT license by Expat
+  * Bump debhelper compatibility level to 10
+  * Add "Multi-Arch: same"
+
+  [ Olly Betts ]
+  * Switch build dependencies to the new GTK3 build of wxWidgets.
+
+ -- Damyan Ivanov <dmn@debian.org>  Sat, 13 Jan 2018 13:19:58 +0000
+
+libalien-wxwidgets-perl (0.69+dfsg-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Switch repackaging framework to Files-Excluded method.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Remove Franck Joncourt from Uploaders.
+    Thanks to Tobias Frost (Closes: #831276)
+
+  [ gregor herrmann ]
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Remove Ryan Niebur from Uploaders. Thanks for your work!
+
+  [ Damyan Ivanov ]
+  * New upstream version 0.69+dfsg
+  * drop reproducible_build.patch (applied upstream)
+  * declare conformance with Policy 4.1.2 (no changes)
+
+ -- Damyan Ivanov <dmn@debian.org>  Tue, 12 Dec 2017 19:26:23 +0000
+
+libalien-wxwidgets-perl (0.67+dfsg-3) unstable; urgency=medium
+
+  * Update generation of libwx*-dev versioned dependencies.
+    Adjust version mangling of upper bound to also handle the new "+dfsg"
+    versions.
+    (Closes: #808284)
+  * Add another fix to fix-pod-spelling.patch.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 18 Dec 2015 15:16:13 +0100
+
+libalien-wxwidgets-perl (0.67+dfsg-2) unstable; urgency=medium
+
+  * Add "gcc | c-compiler" to Depends. (Closes: #784846)
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 09 May 2015 17:18:47 +0200
+
+libalien-wxwidgets-perl (0.67+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop wx-config-version.patch, applied upstream.
+  * Add patch to make builds reproducible. Thanks to Chris Lamb for the
+    bug report and patch. (Closes: #778949)
+  * Update years of packaging copyright.
+  * Mark package as autopkgtest-able.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 01 May 2015 17:29:57 +0200
+
+libalien-wxwidgets-perl (0.65+dfsg-4) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Drop manual generation of perlapi-* dependency, use debhelper
+    9.20140809 instead.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Explicitly build-depend on libmodule-build-perl.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 20 Sep 2014 02:47:28 +0200
+
+libalien-wxwidgets-perl (0.65+dfsg-3) unstable; urgency=medium
+
+  [ Niko Tyni ]
+  * Provide wxperl-<key> virtual package.
+    Provide wxperl-<key> (currently wxperl-gtk2-3-0-1-uni-gcc-3-4) virtual
+    package to avoid version skew between this package and libwx-perl.
+    (See #757855)
+
+  [ gregor herrmann ]
+  * Add Breaks on libwx-perl versions which don't use the virtual package.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 13 Aug 2014 23:21:34 +0200
+
+libalien-wxwidgets-perl (0.65+dfsg-2) unstable; urgency=medium
+
+  * Add perlapi-* to Depends (cf. #750017).
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 05 Jun 2014 19:34:15 +0200
+
+libalien-wxwidgets-perl (0.65+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update (build) dependencies to wxwidgets3.0. (Closes: #743281)
+  * Update years of packaging copyright.
+  * Patch Build.PL for supporting wxwidgets3*.
+    `wx-config --version' only allowed 2* as an answer.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 01 Apr 2014 19:32:27 +0200
+
+libalien-wxwidgets-perl (0.64+dfsg-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Florian Schlichting ]
+  * Switch dh compatibility to level 9 to enable passing of hardening flags
+  * Delete trailing empty line in debian/control
+  * Declare compliance with Debian Policy 3.9.5
+
+ -- Florian Schlichting <fsfs@debian.org>  Fri, 07 Mar 2014 00:30:57 +0100
+
+libalien-wxwidgets-perl (0.64+dfsg-2) unstable; urgency=low
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Explicitly (build-)depend on Module::Pluggable. (Closes: #711646)
+
+  [ Niko Tyni ]
+  * Add build and runtime dependencies on the new libwxgtk-media2.8-dev
+    package, in order to include configuration information about the
+    media plugin. (See #719380)
+
+ -- Niko Tyni <ntyni@debian.org>  Thu, 15 Aug 2013 21:45:14 +0300
+
+libalien-wxwidgets-perl (0.64+dfsg-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * Update debian/repack.stub.
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Dominique Dumont ]
+  * Imported Upstream version 0.64+dfsg
+  * control: updated standard-version to 3.9.4 (no other changes)
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 02 May 2013 18:40:15 +0200
+
+libalien-wxwidgets-perl (0.59+dfsg-1) unstable; urgency=low
+
+  [ Dominique Dumont ]
+  * Imported Upstream version 0.55
+  * control: bumped standard-version (no other changes)
+  * copyright: refreshed format and syntax
+
+  [ gregor herrmann ]
+  * New upstream release 0.59.
+  * Update years of upstream and packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 27 May 2012 20:45:52 +0200
+
+libalien-wxwidgets-perl (0.54+dfsg-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Adjust substvar generation to common practice in other packages.
+
+  [ Dominique Dumont ]
+  * control: BD on libwxgtk2.8-dev >= 2.8.12.1-6 to force dependency on
+    new multi-arch lib
+  * control: added dod to uploaders
+
+ -- Dominique Dumont <dod@debian.org>  Fri, 30 Dec 2011 17:55:37 +0100
+
+libalien-wxwidgets-perl (0.53+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 15 Oct 2011 20:57:37 +0200
+
+libalien-wxwidgets-perl (0.52+dfsg-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Add /me to Uploaders.
+  * Set Standards-Version to 3.9.2 (no further changes).
+  * Bump debhelper compatibility level to 8.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 30 Aug 2011 19:37:53 +0200
+
+libalien-wxwidgets-perl (0.51+dfsg-1) unstable; urgency=low
+
+  [ Franck Joncourt ]
+  * New upstream release
+  * Clean up debian watch.
+  * Added /me to Uploaders (Refreshed d.control and d.copyright accordingly).
+  * Switch to dpkg-source 3.0 (quilt) format.
+    + Refreshed README.source.
+    + Dropped BD on quilt.
+    + Removed --with quilt option.
+  * Refreshed d.copyright:
+    + Follow the latest DEP5.
+    + Updated path to match the new layout of files.
+  * Bumped up Standards-Version to 3.9.1 (no changes).
+  * Removed (build-)dependency on libmodule-pluggable-perl. The package
+    requires at least 2.6, but perl 5.10 from stable ships 3.9.
+
+  [ Roberto C. Sanchez ]
+  * Review and update debian/copyright.
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Tue, 18 Jan 2011 20:54:15 -0500
+
+libalien-wxwidgets-perl (0.50+dfsg-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Add a patch to fix POD spelling
+
+  [ Ryan Niebur ]
+  * require wxwidgets 2.8.10.1
+  * Add myself to Uploaders
+  * New upstream release
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 17 Jan 2010 19:04:57 -0500
+
+libalien-wxwidgets-perl (0.46+dfsg-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+
+  [ Roberto C. Sanchez ]
+  * Tighten up Build-Depends:
+    + change 'perl-modules (>= 5.10) | libmodule-build-perl,
+      libextutils-cbuilder-perl' to 'perl-modules (>= 5.10.1)' since
+      libalien-wxwidgets-perl now requires ExtUtils::CBuilder: 0.24
+
+  [ gregor herrmann ]
+  * debian/control: Changed: (build-)depend on perl instead of perl-
+    modules.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 08 Nov 2009 16:23:57 -0500
+
+libalien-wxwidgets-perl (0.44+dfsg-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+    + Rename command-line options to avoid clashing with
+      Module::Build options (closes: #546225)
+  * Added myself to Uploaders and copyright
+  * Standards-Version 3.8.3
+  * Move lintian-overrides to libalien-wxwidgets-perl.XXX
+  * Update copyright information to machine-readable version
+  * Rewrote control file description
+  * Remove README.txt from installation, it's not useful
+
+  [ Ryan Niebur ]
+  * debhelper 7
+
+  [ Roberto C. Sanchez ]
+  * Tighten up Build-Depends on debhelper since debian/rules uses overrides
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 03 Sep 2009 16:04:26 -0400
+
+libalien-wxwidgets-perl (0.42+dfsg-1) unstable; urgency=low
+
+  * drop version from libextutils-cbuilder-perl. The version provided by
+    perl-modules is sufficient.
+    (see http://lists.debian.org/debian-perl/2009/04/msg00072.html)
+  * Standards-Version: 3.8.1 (no changes needed)
+  * add module name to long description
+  * copyright:
+    + use dist-based upstream URL
+    + add "Copyright" in addition to "(C)" in debian/* part
+    + complete copyright/licensing information for all files in inc/
+  * watch: do not limit upstream source location to its current author
+  * add debian/repack.sh for repackaging upstream sources
+    + this is due to unlicensed source files in inc/src as well as the
+      resulting inc/bin/patch.exe
+    + hook debian/repack.sh to debian/watch
+    + rules: provide a get-orig-source target
+  * add README.source documenting repackaging, mention it in debian/copyright
+    too
+
+ -- Damyan Ivanov <dmn@debian.org>  Wed, 29 Apr 2009 23:22:05 +0300
+
+libalien-wxwidgets-perl (0.42-1) unstable; urgency=low
+
+  [ Roberto C. Sanchez ]
+  * New upstream release
+  * Add a Build-Depends on libextutils-cbuilder-perl (>= 0.24)
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Tue, 18 Nov 2008 19:47:29 -0500
+
+libalien-wxwidgets-perl (0.41-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Wed, 29 Oct 2008 23:04:03 -0400
+
+libalien-wxwidgets-perl (0.39-1) unstable; urgency=low
+
+  * New upstream release
+  * rules: fir target dependencies for parallel builds
+  * upload to unstable
+
+ -- Damyan Ivanov <dmn@debian.org>  Mon, 15 Sep 2008 10:01:55 +0300
+
+libalien-wxwidgets-perl (0.37-2) experimental; urgency=low
+
+  * Bump (build-)dependencies on Wx to 2.8.
+  * Upload to experimental
+
+ -- Damyan Ivanov <dmn@debian.org>  Thu, 31 Jul 2008 09:24:24 +0300
+
+libalien-wxwidgets-perl (0.37-1) unstable; urgency=low
+
+  * New upstream release
+  * Update to Standards-Version 3.8.0 (no changes)
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Mon, 30 Jun 2008 18:08:09 -0400
+
+libalien-wxwidgets-perl (0.36-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Tue, 20 May 2008 16:11:33 -0400
+
+libalien-wxwidgets-perl (0.35-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Sun, 04 May 2008 16:53:20 -0400
+
+libalien-wxwidgets-perl (0.34-1) unstable; urgency=low
+
+  * New upstream release.
+  * recognize_g++_compiler.patch: Removed, included upstream, removed quilt
+    framework.
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Sun, 13 Apr 2008 09:15:53 -0400
+
+libalien-wxwidgets-perl (0.33-3) unstable; urgency=low
+
+  * More intelligent check for compiler name and version (Closes: #475776)
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Sat, 12 Apr 2008 23:31:47 -0400
+
+libalien-wxwidgets-perl (0.33-2) unstable; urgency=low
+
+  * Make Alien::wxWidgets->config able to see g++ >= 4.3 (Closes: #474404)
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Sat, 12 Apr 2008 13:59:20 -0400
+
+libalien-wxwidgets-perl (0.33-1) unstable; urgency=low
+
+  * debian/rules: Fix so package builds when run as 'debian/rules binary-arch'
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Mon, 21 Jan 2008 20:33:30 -0500
+
+libalien-wxwidgets-perl (0.32-3) unstable; urgency=low
+
+  [ Roberto C. Sanchez ]
+  * fill README.Debian
+
+  [ Damyan Ivanov ]
+  * Move test suite to build-stamp target
+  * Instead of hunting down .packlist files with find, give 'Build install' a
+    create_packlist=0 parameter
+  * Add libtest-pod-perl and libtest-pod-coverage-perl to Build-Depends
+  * Stop removing usr/lib/perl5/auto/Alien/wxWidgets/ as it is not
+    created
+  * debian/rules: delete /usr/share/perl5 only if it exists.
+  * add ${perl:Depends} to Depends:
+  * add myself to Uploaders
+
+ -- Damyan Ivanov <dmn@debian.org>  Tue, 08 Jan 2008 16:58:40 +0200
+
+libalien-wxwidgets-perl (0.32-2) unstable; urgency=low
+
+  * Add missing dependency.
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Sat,  5 Jan 2008 14:55:35 -0500
+
+libalien-wxwidgets-perl (0.32-1) unstable; urgency=low
+
+  * Initial release (Closes: #459256)
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Fri,  4 Jan 2008 10:38:49 -0500

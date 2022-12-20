@@ -1,0 +1,28 @@
+Description: fix POD spelling
+Origin: vendor
+Bug: https://rt.cpan.org/Public/Bug/Display.html?id=69641
+Forwarded: https://rt.cpan.org/Public/Bug/Display.html?id=69641
+Author: Jonathan Yu <jawnsy@cpan.org>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Last-Update: 2015-12-18
+
+--- a/lib/Alien/wxWidgets.pm
++++ b/lib/Alien/wxWidgets.pm
+@@ -206,7 +206,7 @@
+ 
+ Using C<Alien::wxWidgets> without parameters will load a default
+ configuration (for most people this will be the only installed
+-confiuration). Additional parameters allow to be more selective.
++confiuration). Additional parameters allow one to be more selective.
+ 
+ If there is no matching configuration the method will C<die()>.
+ 
+@@ -236,7 +236,7 @@
+ 
+     my $config = Alien::wxWidgets->config;
+ 
+-Returns some miscellaneous configuration informations for wxWidgets
++Returns some miscellaneous configuration information for wxWidgets
+ in the form
+ 
+     { toolkit   => 'msw' | 'gtk' | 'motif' | 'x11' | 'cocoa' | 'mac',

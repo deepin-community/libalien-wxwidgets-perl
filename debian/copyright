@@ -1,0 +1,97 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Alien-wxWidgets
+Upstream-Contact: Mattia Barbon <mbarbon@cpan.org>
+Source: https://metacpan.org/release/Alien-wxWidgets
+Comment: Since upstream-provided tarball contains files without license, it has to be
+ repackaged. The following items are removed:
+ .
+ + inc/src/: contains files without a license
+ + inc/bin/patch.exe: supposedly the result of compiling the above sources.
+   removed as it becomes sourceless after inc/src removal
+Files-Excluded: inc/bin/patch.exe
+ inc/src
+
+Files: *
+Copyright: 2005-2012, Mattia Barbon <mbarbon@cpan.org>
+License: Artistic or GPL-1+
+
+Files: debian/*
+Copyright: 2008-2009, Roberto C. Sanchez <roberto@connexer.com>
+ 2008-2009, Damyan Ivanov <dmn@debian.org>
+ 2009, Jonathan Yu <jawnsy@cpan.org>
+ 2010, Franck Joncourt <franck@debian.org>
+ 2011-2020, gregor herrmann <gregoa@debian.org>
+License: GPL-2+
+
+Files: inc/bin/patch
+Copyright: 1999, Moogle Stuffy Software <tgy@chocobo.org>
+License: Artistic or GPL-1+
+
+Files: inc/inc_Archive-Extract/Archive/Extract.pm
+Copyright: 2002, Jos Boumans <kane@cpan.org>
+License: Artistic or GPL-1+
+
+Files: inc/inc_File-Fetch/File/Fetch.pm
+Copyright: 2003-2007, Jos Boumans <kane@cpan.org>
+License: Artistic or GPL-1+
+
+Files: inc/inc_IPC-Cmd/IPC/Cmd.pm
+Copyright: 2002-2006, Jos Boumans <kane@cpan.org>
+License: Artistic or GPL-1+
+
+Files: inc/inc_Locale-Maketext-Simple/Locale/Maketext/Simple.pm
+Copyright: 2003-2006, Audrey Tang <cpan@audreyt.org>
+License: Expat
+
+Files: inc/inc_Module-Load*
+Copyright: 2002-2007, Jos Boumans <kane@cpan.org>
+License: Artistic or GPL-1+
+
+Files: inc/inc_Params-Check/Params/Check.pm
+Copyright: 2003-2004, Jos Boumans <kane@cpan.org>
+License: Artistic or GPL-1+
+
+License: Artistic
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the Artistic License, which comes with Perl.
+ .
+ On Debian systems, the complete text of the Artistic License
+ can be found in `/usr/share/common-licenses/Artistic'.
+
+License: Expat
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+ .
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+ .
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+License: GPL-1+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 1, or (at your option)
+  any later version.
+ .
+  On Debian GNU/Linux systems, the complete text of version 1 of the GNU General
+  Public License can be found in `/usr/share/common-licenses/GPL-1.
+
+License: GPL-2+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2, or (at your option)
+  any later version.
+ .
+  On Debian systems, the complete text of version 2 of the GNU General
+  Public License can be found in `/usr/share/common-licenses/GPL-2'.
